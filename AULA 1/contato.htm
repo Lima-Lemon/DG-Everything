@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Contato</title>
+</head>
+<body>
+    <header>
+        <h1>Formulário de Contato</h1>
+        <div class="menu">
+            <a href="index2.htm">Ver Currículo</a>
+            <a href="hobbies.htm">Ver hobbies</a>
+        </div>
+    </header>
+    
+    
+    <section class="formulário">
+        <h2>Preencha os dados seguintes</h2>
+        <form action="#" method="POST">
+            <label for="nome">Nome e Sobrenome</label>
+            <input type="text" name="usuário" id="nome" value="" required/>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required/>
+            <label for="assunto">Assunto da mensagem</label>
+            <select name="assunto" id="assunto">
+                <option value="Pr">Proposta</option>
+                <option value="Dv">Dúvida</option>
+                <option value="Ot">Outro</option>
+            </select>
+            <label for="gênero">Gênero</label>
+            <input type="radio" name="gênero" id="gênero" value="F"> Feminino
+            <input type="radio" name="gênero" id="gênero" value="M"> Masculino
+            <input type="radio" name="gênero" id="gênero" value="N"> Prefiro não responder
+            <label for="passatempos">Passatempos</label>
+            <input type="checkbox" name="passatempos" id="passatempos" value="Música"> Música
+            <input type="checkbox" name="passatempos" id="passatempos" value="Videogame"> Videogame
+            <input type="checkbox" name="passatempos" id="passatempos" value="Desenhar"> Desenhar
+            <input type="checkbox" name="passatempos" id="passatempos" value="Séries"> Séries
+            <input type="checkbox" name="passatempos" id="passatempos" value="Ler"> Ler
+            <input type="checkbox" name="passatempos" id="passatempos" value="Anime"> Anime
+            <input type="checkbox" name="passatempos" id="passatempos" value="Esporte"> Esporte
+    
+            <label for="comentários">Comentários</label>
+            <textarea name="comentários" id="comentários" cols="50" rows="4" required></textarea>
+    
+            <button type="submit">Enviar</button>
+            <button type="reset">Excluir</button>
+        </form>
+    </section>
+    
+
+    <footer>
+        <h4>Site desenvolvido como método de estudo orientado pelo curso da Digital House</h4>
+    </footer>
+</body>
+</html>

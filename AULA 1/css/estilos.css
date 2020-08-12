@@ -1,0 +1,143 @@
+body {
+    background-image: url(../images/fundo.png);
+    background-attachment: fixed;
+    font-family: sans-serif;
+    color: #f0f0f0;
+}
+
+a {
+    color: #f0f0f0;
+}
+
+a:hover {
+    color: orangered;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #795548;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Fondamento', cursive;
+    font-style: italic;
+    color: rgba(250, 18, 18, 0.548);
+}
+
+h2 {
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+p {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.destaque {
+    background-color: yellowgreen;
+    color: red;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+strong {
+    color: orangered;
+}
+
+em {
+    color: rgb(197, 86, 46);
+}
+
+mark {
+    color: green;
+}
+
+input:focus, textarea:focus {
+    background-color: rgb(70, 68, 68);
+}
+
+textarea#comentários {
+    resize: vertical;
+}
+
+img.imgHobbies:hover {
+    border-radius: 20px;
+    width: 400px;
+}
+
+.menu, footer, footer h4 {
+    background-color: rgba(135, 163, 56, 0.651);
+    color: #f0f0f0;
+}
+
+.menu a {
+    margin: 20px;
+}
+
+.dadosPessoais {
+    background-color: #464141;
+}
+
+.perfil {
+    background-color: darkslategray;
+}
+
+.experiência {
+    background-color: black;
+}
+
+section {
+    /* box-sizing: border-box; */
+    width: 960px;
+    padding: 30px;
+    border: dashed 5px #f0f0f0;
+    margin: 20px auto;
+}
+
+
+/* div.C, div.B {
+    display: inline-block;
+} */
+
+
+div.A {
+    background-color: blue;
+}
+
+div.B {
+    width: 300px;
+    float: left; /* Usei essa linha de código, mas pesquisei */
+    /* margin-right: auto; /* Como assim "flutuar à esquerda?" */
+    background-color: black;
+    
+}
+
+div.C {
+    background-color: green;
+    width: 630px;
+    float: right;
+    
+}
+
+div.D {
+    width: 960px;
+    float: right;
+    background-color: hotpink;
+}
+
+div {
+    width: 960px;
+    padding: 30px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+div.base {
+    width: 960px;
+    padding: 0px;   
+}
+
