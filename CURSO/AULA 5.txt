@@ -1,0 +1,69 @@
+BOOTSTRAP
+	getbootstrap.com -> site do bootstrap. -> pega o link do css e cola no link lá do html. Os scripts também.
+	o script pode ser colocado tanto dentro do head, quanto no final do body (melhor no final do body - o css tem que ser carregado primeiro). Fazendo essas duas coisas, já tem o ambiente configurado para o bootstrap
+	Já tem uma fonte padrão diferente.
+	Padrão -> colocar o arquivo dentro de uma div e colocar como classe o nome que será identificado pelo bootstrap, como a calss="container"
+	Container-fluid -> trabalha com percentual. Container trabalha com pixels.
+	Container normal: trabalha com tamanho de tela em pixels -> ele calcula e mostra de determinado jeito
+	Container-fluid: trabalha com a tela inteira, 100% da tela.
+
+	Grid system no bootstrap:
+		A tela foi dividida em 12 partes (facilmente divisível - muitos divisores).
+		Várias 12 colunas. - tem um desenho no power point para ficar mais fácil de ver.
+		12 colunas por linha. Sempre 12 colunas, mas a quantidade de linhas pode variar.
+		div class="row" - demonstra que é uma linha. Dentro dela, cria divs para separar as colunas.
+			div do tipo coluna especificando o número de colunas div class="col-8" - coluna com 8 partes - se fosse com 6, seria até o meio
+		Usando apenas o col, vai ficar desse jeito para qualquer tipo de tela.
+		.col-md-xtamanho -> para telas maiore sque 768px - tablets, notebock, pc e tals
+		<div class="col-12 col-md-6"> -> vai pegar o col-12 só quando menor que md
+		<div class="col-12 col-md-6 col-lg-8"> -> quando a tela for maior que 992px, ela vai pegar 8 colunas. Quando tiver entre 768px e 992 fica com 6 colunas
+	
+	para customizar componentes já prontos, como de angular, aí você precisa saber usar o css puro, inspecionando o elemento, identificar qual a class e sobreescrever.
+	parece que para sites costuma ser usado o bootstrap mesmo, e para sistemas os outros (?)
+
+	para sobrescrever as coisas do bootstrap, coloque o link do css depois (ordem de html)
+
+	Bootstrap funciona em flexbox, sendo fragmentado em 12 colunas.
+
+	O cara, no trabalaho, geralmente fragmenta tudo antes e depois vai adicionando as coisas do site. (fragmenta as colunas e tals)
+		fragmenta tudo com div e depois pensa nas tags semânticas (ele faz isso) - vai colocando leras e cores tipo a b c
+	O layout geralmente possui apenas 1 container
+
+	cores semânticas no bootstrap
+	<!--
+		primary -> azul
+		secondary -> cinza
+		success -> verde
+		warning -> amarelo
+		danger -> vermelho
+	-->
+	<div class="col-12 bg-primary"> -> vai ficar com background azul
+		a boa prática é definia a cor em classe primeiro e depois alterar parece, sobrescrevendo
+		.bg-primary {background-color:blue;} -> não vai alterar, pois ele tem algumas coisas que forçam ele a funcionar no seus css de origem. Para funcionar, você vai ter que colocar: blue !important
+
+	div.row>div.col-6 -> vai criar direitinho - muito útil
+	md - tablet mais ou menos
+	sm - smartphone
+	
+	col e tals -> o padrão sem nada é pro mobile e depois vai aumentando a tela -> mobile first
+	col-12 col-md-6 
+
+	shift+tab -> volta a identação
+	ctlr+espaço -> faz uma leitura das pastas/arquivos na hora de colocar um link
+	Legal ir comentando onde começa algo e onde temrina para o código ficar mais fácil de se navegar
+	O ideal é mandar as imagens com o tamanho adequado antes
+
+	Modal
+		data-target e id devem ser levados em consideração para não dar erro no site.
+		o botão abre o modal do data-targetr que se refere a um determinado id
+		colocou o formukário dentro do body do modal
+
+	Dicas:
+		para usar front: bootstrap studio -> ferramenta paga que agiliza muito o trabalho. 
+		padding no bootstrap -> pt-5 (pode ser de 0 a 5) (pt=padding top) - isso vai no nome de classe div.class="body pt-5"
+		TENTE NÃO COLOCAR CÓDIGO CSS DIRETO PARA MODIFICAR A BIBLIOTECA, por isso tem essas classes auxiliares para ir alterando.
+		mt (margin top) e tals 
+		
+		entre 1500 e 3000 reais um site -> uma meta de um site a cada duas semanas. - como freela
+	
+	Fazer o site para bootstrap (aquele mesmo site kitchening)

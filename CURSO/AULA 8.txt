@@ -1,0 +1,51 @@
+JS
+	alert => comando em que exibe algo na tela.
+
+Evento de click
+	<div onclick=boasVindas()></div> -> se tivesse argumentos, passaria eles - quando clicar na div, chama a função
+		na vdd ocorre quando solta a tecla do mouse em cima do local - clicando e soltando dentro.
+	<div ondblclick=boasVindas()></div> => double click
+	<div onmouseover=boasVindas()></div> => só de passar o mouse em cima.
+	<div onmouseout=boasVindas()></div> => quando você sai com o mouse ele dispara o evento
+	<div onmousedown=boasVindas()></div> => na hora da pressão do click ele já dispara o evento, não quando solta.
+
+	O evento é chamado dentro da primeira tag do div e passa qual a função que vai querer estar executando.
+Eventos de teclado	
+	<input type="text" onkeyup="alert('Uma tecla foi liberada')"> => quando você solta a tecla ele dispara o evento
+	<input type="text" onkeydown="alert('Uma tecla foi liberada')"> => o mesmo comportamnto do mousedown => no momento de apertar a tecla ele já dispara o evento
+	<input type="text" onkeypress="alert('Uma tecla foi liberada')"> => o mesmo comportamento do onkeydown, mas vloqueia algumas teclas
+
+Eventos de janela
+	Usado dentro do body:
+		onload => só vai executar a função quando toda a página for carregada. - é importante para garantir que uma função só possa ser executada depois que estiver tudo pronto
+			<body onload="alert('A página foi carregada completamente')">
+		<body onresize="console.log('A página foi redimensionada')"> => o evento é disparado quando a tela é redimensionada
+
+Eventos de formulário
+	<input  type="text" onfocus="alert('O elemento ganhou o foco');"> => chama o evento quando estiver com foco nele - coloca o cursos dentro do input
+	<input  type="text" onblur="alert('O elemento perdeu o foco');"> => chama o evento quando o elemento perde o foco
+	   <select onchange="alert('A opção foi alterada')">
+        	<option value="1">Primeira Opção</option>
+	        <option value="2">Segunda Opção</option>
+	    </select> => qunado mudar a opção de select chama o evento
+
+Calculadora
+	Interação HTML com JS
+		No geral, costuma acessar pelo id. Lembrando que o id tem que ser único por página. 
+		Primeiro mapeamos os componentes com os ids correspondentes para depois chamá-los no script.
+		var operacao = document.getElementById('operation').value; => vai pegar o valor do elemento passando pelo id. Caso não tivesse colocado o .value, teria pegado o operation em si
+		Em JS vem o número em string quando vindo do input. Para mudar, faz o parseFloat -> convertendo para float.
+
+
+Balões
+	window -> é a página toda, possuindo várias funções, como location.href
+		window.location.href = 'jogo.htm?'+nivel; => o ponto de interrogaçõa mostra que vai um parâmetro junto com o html - vai redirecionar para a página levando o parâmetro
+
+	background-position:bottom > começa de baixo a imagem e corta lá em cima
+
+	var nivel_jogo = url.replace("?". ""); => pega a url com o parâmetro e usa uma das fuções da string de replace, para substituir a ? pelo vazio
+	innerHTML => injetar, no HTML, um vaor: exemplo -> document.getElementById('cronometro').innerHTML = tempo_segundos;
+		Sendo esse o span: span id="cronometro" style="color: red; font-size: 30px;"></span>
+
+	setTimeout -> método nativo já do js => recebe dois argumentos - o primeiro é uma função que ela vai executar e o segundo elemento é o tempo que ela vai demorar pra executar essa função.
+		

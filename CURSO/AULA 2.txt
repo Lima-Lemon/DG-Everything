@@ -1,0 +1,63 @@
+AULA 2 - ROTAS NO HTML
+div -> separar os blocos/seções da nossa página
+	seletor para nomear as divs
+	id: atributo que damos a div, podendo colocar qualquer nome nele. Toda tag que se colocar um id, ele tem que ser ÚNICO! Não podem ser repetidos.
+	Para chamar a id no css -> #div1
+	<div id="div1"></div>
+
+	class: para chamar no html, coloca ponto: .fundoAmarelo { background-color: yellow; }
+	<div class="fundoAmarelo"> lorem </div>
+	O class, pode aplicar onde quiser. Em qualquer tag.
+
+	Introdução aos caminhos
+		Caminho absoluto -> colocar o url direto
+		Caminho relativo -> src="imagens/foto.jpg" (ele parte de onde está o arquivo. nesse caso, está na mesma raiz da pasta imagens. Logo, para acessar a pasta de imagens, pode só colocar dessa maneira que foi escrita)
+			Isso se estiver na mesma raiz/ nível! Aí basta fazer assim. Caso contrário, se não estiver no mesmo nível, podemos fazer da determinada maneira:
+				Voltar uma pasta, ficar no mesmo nívelm e, aí sim, entrar na pasta imagens.
+				src="./imagens/foto.jpg" (./ volta um nível) - acho que para voltar um nível é ../ e se quiser de novo é mais dois pontos e barra (../../)
+		Links: a tag <a> é usada para definir o destino
+			<a href="http://google.com">Ir para o Google</a>
+			Coloque sempre o completo, com http ou https e tals - o ideal é colocar o endereço completo para evitar problemas. Se não tiver, ele tende a procurar em http
+			Internos: âncoras -> acessa, por exemplo, uma div. Procura dentro da mesma página -> <a href="#bio">
+			email -> tem a tag no ppt e telefone parece
+	
+		Como inserir imagem: tag img com quatro atriutos básicos, o src (endereço propriamente dito, podendo ser relativo ou absoluto); o alt (por exemplo, para pessoas cegas que utilizam leitores de tela - também é utilizado para SEO); width e height	- se não colocar altura e latgura, vai pegar o que for normal dela
+	Seletores de CSS -> tag, id (#) e classe (.)
+	
+	
+	Descendentes e Combinações (propriedades do CSS)
+		Seletor pai e seletor filho: div div {} a div que estiver dentro de um seletor div, ou seja, a div filha da div de fora, vai pegar o que estiver dentro deste bloco de códigos.
+		div#id1 {
+    background-color: red;
+} -> chamando uma id, mas geralmente se usa class: Sempre que for repetir, ou seja, se não for algo do css para uma coisa única, usamos o class.
+
+	Múltiplos elementos no css -> div,p -> é só colocar vírgulas para separar
+
+	Seletor pai e filho, pode colocar com espaço entre eles ou podemos colocar com sinal de maior 
+		
+
+	Colocando uma imagem de fundo pelo CSS: (mostrando no w3schools)
+		Ele colocou dentro do body
+	body {
+		background-image: url(aqui pode ser o caminho absoluto ou relativo) - isso coloca uma imagem no fundo.
+		background-repeat: no-repeat; - isso é parar repetir ou não a imagem, a qual pode ser também para repetir horizontalmente ou verticalmente. - se não escrever nada, repete tudo. - quando vamos usar repeat ex: fazer uma borda - deixa a borda dinâmica e tudo mais.
+		background-attachment: fixed; - pode ser isso ou local ou scroll -> scroll = se for rolar a barra de imagem, a imagem rola junto com a barra de rolagem, ou seja, ela fica lá em cima se você descer. fixed fica em uma posição fixa, logo, parece que vai descendo junto se descer. Local:  
+		background-position: center; - pode ser left ou right também
+		background-size: cover; - auto -> preenche tudo, se colocar valores, preenche com os valores colocados (não entendi das coisas que estava escrito - ele não chegou a falar)
+	}
+
+	Vídeos: tá lá no power point. A maioria dos navegadores executa o mp4 - ele vai tentar na sequência do power point, se não der, o parágrafo aparece.
+	Áudio é quase a mesma coisa.
+	Cores: hexadecimal (vermelho, verde e azul do 00-mais fraco ao ff-mais saturado), rgb, rgba (alfa) - o a é o final, mostrando o atributo de opacidade - Pode ser utilizada a tag opacity também é em porcentagem de 0 a 1.
+	
+
+POSICIONAMENTO
+	Supondo 3 divs criadas -> queremos pegar a div de cima e descer um pouco, dando um efeito de sobreposição
+	Dificilmente se utiliza o fixed, porque ele altera muito desconfigurando. Ele toma como base a janela do browser. O elemento não sai do lugar quando a página é rolada.
+	Relativo: left e o top é o quanto ele está afastado da esquerda e do topo. Toma como referência a div pai dele, a div em que ele está dentro, tomando ela como base. Logo, ele começa da posição 0 0 e, com isso, ele vai se afastar 100px do topo e 10px da esquerda. Toma como base o que ele está inserido.
+		Toma como base a div (container) em que está inserido.
+	Absoluto: pode tomar div ou body como base/ referência. Toma como base uma div (container) que também possua características de absolute ou o body.
+		Quando se usa o absoluto, ele toma como base para a posição ou o body, ou, se essa div estiver inserida dentro de uma div que também seja absoluta, ele vai tomar essa div como a base (um pai absoluto). - isso parece importante
+	Brincar com essa estrutura que ele fez para aprendermos para montar a página do segundo exercício;
+	z-index: -1 -> a div vai ficar por baixo da outra div, pq a outra provavelmente, por default, fica com ele 0.
+		usamos ele para fazer as sobreposições

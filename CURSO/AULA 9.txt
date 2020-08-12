@@ -1,0 +1,50 @@
+AULA 9 - FORMULÁRIOS E AJAX
+	AJAX: pode sr feito com js puro ou com jquery. O com jquery é mais usado hoje em dia.
+		Utilizado para requisições assíncronas - faz as requisições e o sistema não trava.
+		Usando o exemplo do professor, sem ajax -> quando clica em um botão de link, ele carrega a página inteira. Ele recarrega a página inteira.
+		Quando se utiliza ajax, isso é evitado - a página não é recarregada, mas só coisas específicas que precisarem, no caso, só a div do conteúdo da página. - é assíncrono - não trava enquanto faz isso eu acho
+	
+Ajax com JS Puro
+	Criamos uma div que vamos inserir o conteúdo dinamicamente
+	<a href="#" class="btn btn-primary" onclick="fazerRequisicao('pagina_1_conteudo.htm', 'div_conteudo')">Página 1</a> => dois parâmetros da função, o primeiro qual a página que deverá ser renderizada dinamicamente quando clicar no botão e o segundo é onde ela vai ser renderizada (o id do local)
+	Verificação - tem que pegar o browser - utiliza o window para pegar as propriedades do browser - e chama a propriedade XMLHttpRequest - se ela existir é porque tá utilizando as versões atuais do browser
+	Estados da requisição - 0 = não realizada; 1 = conexão estabelecida; 2 = conexão recebida pelo servidor; 3= servidor processando a requisição; 4 = servidor processou a requisição e retornou a resposta
+	Toda vez que um desses passos ocorre, o onreadystatechange vai realizar uma função. 
+	Erro 500 - quando o servidor não consegue completar a requisição.
+	Stataus 200 - requisição tudo OK.
+
+	A página é uma só, apenas está alterando o conteúdo da div de forma dinâmica - a página não vai ficar recarregando toda hora por inteiro
+	Verifica o navegador para criar o objeto correto e utilizar desse objeto a propriedade onreadystatechange que executa uma função toda vez que o status da requisição for executado. Ele tem que ser antes de abrir a requisição, a qual é feita com httpRequest.open("GET", url) - abrindo a conexão com o serividor nesse código e para enviar faz o httpRequest.send(). E espera retornar tanto o status quanto o corpo., o qual, nesse caso, é o prórprio conteúdo do div
+		Essa resposta que estamos esperando nesse caso. Colocamos ele ali utilizando o innerHTML.
+
+Ajax com JQuery - pode utilizar ele no exercício se quisermos
+	Para usar o jquery, tem que importar a biblioteca dele para o projeto, usando aquele sistema de links que nem quando usa com o bootstrap
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> - pegamos isso clicando em download e escolhendo o do google
+
+	Adicionamos uma classe e apagamos o efeito onclick do botão
+	O conteúdo vem dentro da variável data (dados)
+	O innerHTML dele é só tipo .html
+	Apenas verifica o status da resposta e passa o que quiser fazer
+	Pegando a url de maneira dinâmica
+	Adicionou o evento de click para aqueles que tiverem a classe que colocamos
+	beforeSend - executa uma função enquanto o retorno ainda não veio - ele, nesse caos, vai transformar o display none do loader para block, fazendo o gif aparecer.
+	complete - colocamos para parar de exibir o gif, visto que o conteúdo já vai ter chegado, pois a requisição foi carregada completamente e com sucesso
+	
+	Parece que a aplicação que está fazendo a requisição é chama de cliente.
+	Quando o erro for no servidor, é da família 500.
+
+
+Instalando um back-end falso de forma global
+	npm install -g json -server = g para ser global - para todos os locais
+	é um simulador de back-end
+
+Arquivo json:
+	Dados entre chaves. Dos elementos, só não coloca vírgula no último. Cada registro entre chaves.Vírgulas entre os registros. Colchetes para indicar que é da tabela users.
+
+
+PARA ENVIAR DADOS - MÉTODO POST E COLOCA UMA VÍRGULA PARA MOSTRAR A URL QUE ESTÁ ACESSANDO PARA ENVIAR OS DADOS
+No get, se colocar o id ele vai pegar só o objeto daquele id
+	http://localhost:3000/users/1
+
+post pra postar e get pra buscar
+	

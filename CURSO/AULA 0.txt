@@ -1,0 +1,29 @@
+Vídeo mãe
+Vendedor de Máscaras
+[ V ]Roberto
+[  ]Diego
+grupo para dúvidas
+Montar uma rotina para organizar os estudos a partir de Agosto:
+	ENEM de manhã
+	Digital House 4 dias na semana
+	Todos os dias de 14:00 às 18:30 -> estudo
+
+
+	Cálculo I - 300 minutos -> 5 horas semanais de AULA
+	GAAL - 200 minutos -> 3:30 horas semanais de AULA
+	UFMG - 8:30 horas AULA
+
+
+CALENDÁRIO DA SEMANA
+	Roberto: 19h terça feira
+
+VÍDEO DIGITAL HOUSE
+	https://playground.digitalhouse.com/br/login
+	O conteúdo fica na plataforma por até 3 meses após o curso
+	explicou o porque da apresentaçao
+	https://learngitbranching.js.org/?locale=pt_BR
+	Stack = conjunto de ferramentas
+		Boas stacks para ser requisitado -> angular, css, html, typescript, spring, spring cloud, parece que tem vários springs, java/ javascript, java no backend usando spring.
+			Devops: Docker (usado em núvem), +QL, postgreSQL, noSQL, MongoDB, Git (é essencial) e GitHub, jUnity, Scrum: metodologias ágeis.
+	Deploy = colocar o sistema funcionando na internet, gerando um endereço e tals para as pessoas poderem acessá-lo. - faremos isso no projeto integrador.
+	

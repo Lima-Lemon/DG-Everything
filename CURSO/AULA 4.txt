@@ -1,0 +1,47 @@
+AULA 4 -FLEXBOX
+	Display flex -> se adapta ao tamanho da tela
+	Inicialmente ele coloca as coisas uma do lado da outra.
+	Propriedades
+	1) flex-direction: padrão é row (linha); além dela, tem collumn, row-reverse (inverte o começo do linha, começando da direita para a esquerda), colum-reverse(começa de baixo para cima)
+	2) flex-wrap: nowrap (padrão - cabe tudo na mesma linha mesmo que tenha que alterar o tamanho, espremendo), wrap (respeita a largura, colocando quebra de linha)
+	3) justify-content: flex-start (padrão), flex-end - justifica na direita, tem o center também, para ser centralizado; space-between (justifica na linha toda, colocando espaços entre eles); space-around (coloca um espaço ao redor do componente)
+		para funcionar, acho que tem quer ser flex-wrap para wrap
+	4) align-content: center - alinha baseado no container pai (div pai) - logo, o div pai tem que ter um tamanho maior. Se não mexer nesse tamanho, vai ser o tamanho automático igual, não dando o efeito.
+		flex-start - em cima; flex-end - em baixo
+	5) align-items: flex-end, center, flex-start - parece que tem um comportamento similar.
+	6) verticle-align: parece que alinha verticalmente (?); midle.
+	Order -> você pode mudar a ordem
+	Flex-grow: 1; flex-grow:2 -> o segundo vai ter o dobro do tamanho.
+
+UNIDADES
+	Pixels em percentual pode ser usado também -> percentual do tamanho da tela.
+	1) Medida "em"
+		1 em = 16px, mas isso pode ser configurado/ alterado - simplesmente mudando o font-size do pai, como, por exemplo, do body.
+		body -> default de fonte de 16px. 
+			dentro desse body, um font-syze de 1 em vai pegar como base o tamanho da fonte da div pai, no caso, o body.
+		Acredito que a vantagem disso deva ser para responsividade por alterar o de todos de uma vez (?). Não sei, mas acaba mudando o layout inteiro, esse seria o benefício. 
+
+	Responsividade: desenvolver já pensando em vários tamanhos de tela. 
+	meta tag viewport
+	2) vw/ vh -> largura de um viewport e altura. - muito raro de ser utilizado parece - viewport seria a tela do dispositivo eu acho, pegando 25% e 50% da tela.
+	Media-queries que são mais usados -> dá trabalho para fazer, mas é últil. O boottrap já traz isso, mas é bom saber.
+		Pensa-se, primeiro, no Mobile (na questão de apresentação de tela)
+	
+VISUALIZAÇÃO E PSEUDOELEMENTOS
+	TABELA
+		Coluna pe tag td - ficam dentro de linhas
+		Linha é tag tr
+		Cabeçalho - tag th - geralmente fica na primeira linha
+		rowspan="2" - adiciona espaços de linha, no caso 2
+		colspan - adiciona espaços de coluna
+	PSEUDO-ELEMENTOS
+		h::before vai ver antes e o after vem depois. Acho que deixa mais dinâmico. Pode ser usado imagem também e tals.
+			Pode usar para fazer linha também e tals.
+
+			O site que o aluno fez: https://www.performister.com.br/
+	display:none -> não vai aparecer
+
+
+
+		
+		

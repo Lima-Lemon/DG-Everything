@@ -1,0 +1,33 @@
+Oracle - senha Alluroro13
+Arquivo Java no Sping - JavaSE-11
+
+criar um pacote com o nome de exercícios class nele com o nome main.java aí executa com run java aplication depois de apertar botão direito
+
+public static void main(String[] args) {
+		System.out.println("Hello World!");
+	}
+
+Isso dentro da classe main 
+
+Método main - por onde o java começa a execução do programa - sempre que for escrever um programinha, precisamos começar por ele
+Lista de exercício - fazer a escrita e mandar no slack pra Bia - mandar em pdf
+
+Chamamos funções de métodos em Java
+
+if((idade >= 16) && (idade < 18)) => boa prática de colocar as condições entre parênteses par aseparar e deixar o código condicional mais claro
+
+Scanner => é o que captura o que digitar no teclado
+
+Scanner sc = new Scanner(;) => dá para importar o módulo scoando o mouse em cima
+
+Scanner sc = new Scanner(System.in); => system.in de input - o próprio negócio pede isso
+
+usamos esse sc para ler os dados depois => num1 = sc.nextInt(); => sc é o nome do objeto - tem vários tipos de next
+
+função => o public é acessível para todas o private só por aquela classe
+
+int[] notas = {5,6,8,9,10}; => vetor em java, sendo declarado => em js é com colchetes, aqui é com chaves, mas também começa da posição 0 e tals - questão de índice e tals é tudo a mesma coisa.
+
+oo vídeo daquele canal de programação do cara e da mulher no yt com thumb de um cubo mágico
+
+acho que para receber string é sc.next ou nextLine parece

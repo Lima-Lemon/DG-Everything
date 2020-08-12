@@ -1,0 +1,42 @@
+JQUERY - Biblioteca muito utilizada
+	Pode ser incluído de duas formas, uma que precisa de internet e outra que não precisa. Uma com cdn e outra que já é baixado.
+	<script src="jquery-2.2.1.js"></script> => incluindo a biblioteca para poder usar.
+	$(tag).show(); => comando jquery - todos começam com um dólar e, no parênteses, o elemento que iremoes estar trabalhando/ manipulando, depois do ponto, chama a função que esteja implementada no jquery. Existem inúmeras funções - tem no w3schools
+		tag como parâmetro - no caso, como será o p, todo parágrafo que está nessa página vai receber a função .show() - exibe. o hide é como se fosse o display none e o show como se fosse o display block. Lembrando que o elemento está lá, mas ele não está aparecendo.
+		com tag ele atua em todas as tags. Div, p, o que for passado.
+		tag você só rpecisa passar o nome da tag.
+	Para coisas mais específicas, usa o class ou o id
+	
+	$("."+classe).show(); => na chamada da função, coloca qualquer parâmetro para chamar, mas tem que ser o mesmo nome da class que demos para o que queremos esconder ou mostrar.
+		recebendo a classe como parâmetro na função. Mas para executar uma classe, é diferente da tag. A classe tem que ter o .div_2, por exemplo, para o jquery saber que o elemento está dentro de uma class.
+		Diante disso, faz-se essa concatenação do ponto ao nome da classe para ficar o comando certo.
+
+	$("#"+id).show(); => no caso, o mesmo sentido da classe, mas com o hashtag;
+		<button type="button" class="btn btn-success" onclick="exibeElementoPorId('input1');exibeElementoPorId('input2')">Exibir inputs</button> => chamando duas funções no mesmo botão, colocando ponto e vírgula para separar as funções
+		Poderia ser feito de outro jeito, mudando a função para receber dois elementos, por exemplo, mas isso é bom para saber que dá para colocar mais de uma função no mesmo botão (não sabia disso)
+	O dólar indica que vai ser uma execução de um método implementado pelo jquery
+	
+	documento - nossa página, don => $(document).ready() => precisa estar carregada para poder executar o seguinte js
+		        $(document).ready(function(){}); => vai executar essa função anônima - não precis de passar nome - depois que a página carregar. É a função que o ready vai executar após a página ficar pronta - pode passar parâmetros se quiser.
+			     $('#div1').click(function(){
+                		    alert('Elemento clicado!');
+	       		      }); => função de click para a div1.
+		Isso é bom para não ter que poluir o html misturando com js
+		também tem o dblclick para double click. além disso tem o mousedown, mouseover e mouseout
+
+	Lembre-se sempre de, se abrir algo, fechar. - parênteses, chaves, etc.
+	Para click de teclado, tem-se keyup, keydown e keypress
+
+	Para form - focus, blur e change. focus quando o input recebe o foco, o blur quando perde o foco e o change quando o select troca
+
+JOGO DA VELHA
+	Tabela - table - tr é linha - r de row e td pra coluna, mas vamos colocar essa coluna, para ficar centralizada, utilizmaos o colspan="3" - a linha vai ter uma coluna que vai ocupar 3 espaços - como se fosse o mesclar do excell
+	<input type="text" maxlength="10"> => no máximo 10 caracteres
+
+	<div style="display: inline-block;"> => para ficar um do lado do outro
+	
+	pegar o valor usando jquery -> $("#id").val()
+	atribuir um valor usando jquery -> injetar conteúdo na página/ html => $("#id").html(conteúdo que vai colocar, como $("nick1").val() => injeta onde mandar
+	Colocamos em cada div o id para podermos pegar qual foi o elemento clicado
+	$('#'+id).css('background-image', icone); => propriedade de atribuir css
+	

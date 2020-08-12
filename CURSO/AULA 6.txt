@@ -1,0 +1,62 @@
+AULA 6 - GIT
+	Após baixar e instalar -> abre a pasta, botão direito e git bash.
+	
+	Criando um projeto no Github:
+		Readme -> arquivo onde se coloca algumas observações.
+		Clicando em code, copiando o link do repositório - vai na pasta, git bash: comando git clone e cola o link
+			$ git clone https://github.com/Lima-Lemon/aula07.git
+		Vai conectar com o repositório e trazer o que tinha de lá.
+		
+		Para enviar as alterações feitas: comando git add . -> adiciona todas as alterações feitas. Coloca tudo em stage - como se fosse um lugar que vai ser enviado, não vai enviar ainda, só vai reconhecer todos os arquivos e coloca em stage, tipo um espaço esprando dar o comando para de fato enviar lá pra o repositório.
+		Lembre de estar na pasta correta
+		git status -> mostra o status (?)
+		git commit -m (pq ta enviando uma mensagem) "Alterando Readme" -> sempre que se vai fazer um commit é bom ter uma mensagem para entender o que está sendo feito
+		git push origin master -> empurrar da origem (onde estamos no pc) para a master, que é no github.
+
+		Git add -> git commit -> git push (essa é a dinâmica)
+
+		git pull origin master -> para pegar o arquivo e colocar no pc
+
+		Tem vários vídeos lá no power point para aprender algumas coisas
+
+
+JAVASCRIPT
+	Node JS -> baixando a recomendada mesmo - acho que para rodar o js sem ter que abrir o browser
+	Instalamos o plug-in code runner
+	JS -> chaves é objeto e colchetes é array
+	Não possui diferenciação entre float e int.
+	Conteúdo inicial de uma variável é undefined.
+	Declaração de variável, comando de atribuição e tals (ex: "a variável nome recebe Lucas"). Usar o camelCase na declaração de variável.
+	% -> resto da divisão - parece que é chamado de módulo
+	== -> compara valores; === -> além do valor, ele compara o tipo da variável - uma string com 18 e um number com 18 -> comparando assim
+		numero (18) == string (18) -> true; numero === string -> false, pq ele faz a verificação de número e de tipo. Serve para diferente também.
+	if ternário - simplificar o if:
+		como se o if de vdd fose o ? e o else :
+	
+	Switch -> escolha uma variável, caso o valor seja algo... Ele vai pegar a variável e comparar com os valores de case. Se for igual, ele vai realizar todos os comandos seguintes até o break (não sei se precisa ser na mesma linha).
+		Se ele não achar nenhum valor, cai no default.
+		Isso é bom para não ficar com muitos ifs.
+
+	Estruturas de repetição:
+		While: Se a condição for falsa, sai do laço de repetição. Lembre de colocar o encremento a variável utilizada na condição de entrada (ao parâmetro), pois, caso contrário, entrará em um looping infinito.
+		número++ == numero+1
+		numero+= 1 == numero = numero + 1 (que eu me lembre)
+		Do While -> a mesma coisa que o while, mas a verificação é depois. Ele entra e faz de qualquer forma. A verificação é feita no final e a execução primeiro.
+	
+		For: Também faz a comparação primeiro, assim como o while padrão. Verifica, executa o código e depois vai para o encremento. É um ciclo até que a verificação não seja aceita. A declaração do valor da variável de repetição é passada apenas uma vez, no início, sendo apenas uma porta de entrada. Mas parece que altera o valor da variável. (No while também, chequei aqui).
+			Condição de parada, valor inicial e encremento ou decremento.
+	
+		for(var elemento in lista){
+ 		   console.log(elemento);
+		}
+		Vai passar por todos os valores da lista e retornar o índice, caso queira ver o valor do elemento da lista, coloque lista[elemento]
+
+		Objetos: 
+		for(var n in obj){
+    			console.log(n);
+    			console.log(nome[n]);
+		} -> não pega o índice, mas a propriedade -> imprime a propriedade com o n e o conteúdo dela com o nome[n]. Logo, o nome d apropriedade é o n e o conteúdo da propriedade é o nome do objeto e qual a propriedade que quer pegar o conteúdo.
+Quem quiser ver uma forma de fazer teste de mesa: https://www.youtube.com/watch?v=Atcfaafvs4M
+
+		
+		

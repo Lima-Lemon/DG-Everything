@@ -1,0 +1,68 @@
+Microserviços - tendência de tudo hoje - sistemas feitos em microserviços são melhores hoje em dia
+	microserviço de vendas, microserviço de compras, etc.
+	Desenvolvimento de sistemas baseado em microserviços => mais estratégico e econômico.
+		Quebra-se o código em vários pacotes que se comunicam - pode ser de maneira assíncrona ou síncrona
+Algumas coisas para mexer depois - bootstrap - img-fluid na classe e tem mt de 1 a 5 tb pra classe
+	footer a:not(:last-child)::after {
+		content: "blablabla"
+	}
+
+
+FUNÇÕES
+	Parâmetros -> variáveis que podemos utilizar dentro da função.
+	JS - passa tudo para cima antes de rodar, então se a função estiver declarada depois, vai funcionar.
+		as FUNÇÕES que são declaradas antes. Em caso de função anônima, ela só pode ser chamada depois de declarada/ atribuída à variável.
+	função anônima - não recebe nome, mas é atribuída a uma variável - acho que ela vai receber o tipo funciton
+	Return: 
+	Terceiro tipo de função - quase não utilizada - no primeiro argumento passa os parâmetros e depois o código da função, como parâmetro também.
+		pouco utilizada por vulnerabilidade e tals.
+	Função aninhada - tem a função principal e funções dentro dela - inicialmente ele vai ignorar a função e acontecer só quando for chamada
+		o parâmetro da função pai não precisa ser passada para a função filha, pois ela já está declarada dentro do escopo em que a função está inserida
+		o raio vai ser uma variável global para quem estiver ali dentro.
+			Se a função estiver fora do escopo, aí vai ter que passar o parâmetro
+			o conteúdo da função pai pode ser utilizada por qualquer função filha que estiver dentro - no mesmo escopo e tals.
+	Função de callback -> só é executada quando a função principal terminar sua execução
+		a( b ); -> b só vai ser executada depois que a execução de a acabar
+		passando callback como parâmetro - callback que vai se executada depois que a for executada.
+		uma coisa depende da outra, sendo a segunda só executada quando a primeira acabar - coisas assíncronas
+		As coisas vão fluindo, a tela não para, pois é assíncrono
+	Outros jeitos de chamar função -> .call -> coloca o parâmetro entre parêntes e aply coloca entre colchetes dentro do parênteses
+		Call e aply são chamadas para execução de método
+
+	consoe.log(this) -> imprime tudo que estiver dentro do escopo parece(?)
+	Função autoexecutável -> é declarada como se fosse ser em variável, mas não tem variável para ser atribuída. Quando passa por ela, já a executa. Ela fica dentro de parênteses e no final ainda tem um abre e fecha parênteses
+		(function(){
+			var a = 1;
+			console.log(a);
+		})();
+		se tentarmos imprimir o valor de a aqui fora, não conseguiremos, pois a é uma variável local da função lá, não existindo do lado de fora.
+		É uma variável local e não global.
+		
+	Dá para atribuir uma função como o conteúdo de uma propriedade de um objeto. Dá para colocar função dentro de objeto.
+		Usando o this ele pega o que tiver do mesmo objeto - legal demais.
+
+	Prototype
+		String é tratado como um objeto em js, tendo vários métodos, como length e tals. Se quiser adicionar um método para string, por exemplo, usamos o prototype
+			String.prototype.apagar = function() {
+ 			   return "";
+			}
+			console.log("oi".apagar()); -> tendo em vista que criamos o método apagar
+		Podemos criar métodos para objetos já existentes. Para string já existem vários métodos prontos
+
+	Date -> var d = new Date(); -> vai iniciar com a data inicial - pegando o padrão UTC (Time Zone)
+		pode-se passar a data que quer se colocar nnew Date("2020-07-31"); -> ano, mês e dia
+
+	Dá pra fazer index of em string - só funciona para o primeiro elemento que encontrar. Se fizer o lastIndexOf aí vai dar a posição da última encontrada. Slice ele só vai trazer o trecho especificado. 
+		Slice com negativo começa do final. - lembrando que conta os espaços e as ponutações.
+	console.log(s.substr(4,6)); -> substring ele vai pegar a posição especificada e o número de caracteres depois -> o primeiro parâmetro é a posição inicial e o segundo é a quantidade de caracteres depois dessa posição inicial.
+	console.log(s.replace("winter", "summer"));
+	console.log(s.toUpperCase().indexOf('COMING')); - Dá para colocar um seguido do outro.
+	console.log(s.concat("?", "!")); -> concatena na string o que voqê quiser - concatena no final - dessa forma fica mais elegante do que ficar usando aquele mais
+		console.log("Olá".concat(", Rafael", "!"));
+	
+	console.log(s.split(" ")); -> tudo que tiver o que foi indicado para fazer o corte ele quebra e devolve em array. - é bem utilizado
+	
+
+YOUTUBE
+	Promise -> promete que vai dar um valor depois
+		

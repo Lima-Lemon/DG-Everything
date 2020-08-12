@@ -1,0 +1,50 @@
+AULA 11 - AGENDA
+	Vamos instalar o angular npm install -g @angular/cli - no terminal do vs code
+	auto import - plugin que estamos baixando
+	ng new agenda - criando um projeto em angular - escreve isso no terminal powershell
+	Pra ver se tá funcionando: ng serve => lembre de entrar na pasta antes - na pasta criada cd.\agenda\ - isso pra rodar
+		http://localhost:4200/ - vai mostrar que a aplicação está rodando
+
+	Sempre que a gente vai usar componentes do angular, tem que importar o módulo dele
+		em appmodules => import { FormsModule } from '@angular/forms'
+			  imports: [
+    				BrowserModule,
+				    FormsModule
+			  ],
+	
+		<input type="text" [(ngModel)] = "nome"> => estamos jogando o conteúdo da variável nome aqui dentro deste input
+	O app css já vem vinculado ao apphtml
+		<app-root> -> para inserir o bloco de código onde ela estiver. - o approot é o seletor do appcomponent, aí tá só chamando o conteúdo dele
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+
+	Vai pegar o componente e inserir no lugar que tiver essa tag app-root]
+
+	Escrevemos o código em typescript
+
+	ng g c painel-agenda --skip-tests => com o skip para não criar o arquivo de testes - não iríamos utilizar
+		g de generation, c de component, para criar um cmoponente
+	O angular é baseado em componentes
+	Dando esses comandos, ele já configura as coisas
+	temos que migrar o nome do componente que criamos - o seletor - para o appcomponent html
+	*ngFor = "let a of agenda" => a é uma variável que estamos criando para o for
+	ng g s agenda --skip-tests => criando um arquivo service para comunicar o ts com o banco de dados
+		api = "http://localhost:3000/agenda"; => enderço do back-end
+		return this.httpClient.get(this.api); => pega o objeto httpClient que criamos e fazendo um get, indo lá na api, para buscar os dados
+
+
+PRIMENG 
+	npm install primeng --save => Instalando ele
+	npm install primeicons --save
+	npm install @angular/animations --save
+
+	ng-onint -> quando a página for carregada, já vai executar o método consultar, o qual executa o método listar que está no service 
+	
+
+	
+	
+	
+		

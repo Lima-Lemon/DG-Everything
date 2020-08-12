@@ -1,0 +1,76 @@
+HTML SEMÂNTICO E FORMULÁRIOS
+	Tags usadas para melhorar a pesquisa do Google. Além disso, facilitam na leitura da tela e tals.
+	Basicamente utiliza para otimização para motores de busca.
+	Exemplo do negrito: o efeito visual pode ser o mesmo, mas a semântica e o ranckeamento é diferente.
+	Algumas tags semânticas sendo apresentadas no power point.
+	
+	cite: por default, é itálico, mas você pode mudar com font-style: normal.
+	abbr -> abreviação e o que mostrar qunado passar o mouse em cima.
+
+FORMULÁRIOS HTML - PARTE DE LAYOUT
+	Fluxo: html captura os dados que o usuário digita. Valida, pode ser feito tanto no front quanto no back, e processa, e insere no banco de dados.
+	Tags formuláios html: form action -> ação que vai ser executada -> no caso, vai acionar aquela página e, se o método for post, vai pegar os dados do formulário e mandar para
+		o back end na parte do script.php -> logo, o submit aciona essa página que tá na action e pega os dados enviando para o back-end (para inserir no banco de dados)
+		Action -> página que vai ser chamada - onde o back end vai pegar os dados, parece. O action é para chamar qual página vai levar esses dados. O destino dos dados.
+		input -> coloca qual o tipo dele, podendo ser radio e o checkbox e o text - tem que estar dentro de um formulário
+			pode ser de vários tipos - tá no power point.
+			radio - aquela bolinha e o checkbox é o quadradinho.
+			radio:  o name ser o mesmo moostra que eles fazem parte do mesmo grupo - se eles não tiverem no mesmo grupo, não vai ser um ou outro, podendo ser selecionado mais de um. o radio a gente só deve poder selecionar um, o checkbox que pode selecionar mais.
+			checkbox: geralmente são trabalhados com listas, podendo ser marcados vários. - passa a lsita para o back-end - também tem que ter o mesmo nome para mostrar que é o mesmo grupo
+				value é o valor que vai para o back-end. Se já for preenchido por padrão, ele já aparece preenchido (?)
+			required -> campo obrigatório - validação feita já no front-end
+			
+			email -> placeholder é um atributo: é como se fosse um texto que fica ali dentro, mas some quando começa a digitar
+		label -> for associa ele a um input por meio do id - quando clicar no label, já coloca o foco no input
+		br é para dar parágrafo
+
+		select: as informações passadas para o back-end é o que está em VALUE! (Isso para todos) - isso é importante. Não é necessariamente igual ao que é mostrado ao usuário na apresentação do feed
+			select dá opções. Tem o nome do select e as opções.
+		optgroup: usado muito ainda o componente. Colocou dentro do select para agrupar valores - como é label, não é selecionável. Label para definir o grupo.
+		Text area: aquela caixa grande de texto - por default ela pode ser redimensionada. Mas, para desenvolvimento de sistemas, costuma-se limitar isso, pois isso quebra o layout da página. Então, define-se uma altura e uma largura. Altura de quatro linhas e 50 colunas - cabe 200 caracteres
+			para bloquear o dimensionamento por parte do usuário é no css: resize: none;
+			rows -> linhas; cols = "colunas"
+ 		Botões: 3 tipos de botões. Reset -> limpa os campos. Submit -> para enviar os dados para o back-end, pegando todos os camaradas e colocando-os na url e chamar a página que está no action e enviar os dados
+	
+	get = buscar dados/ informações no banco de dados, retornando para o usuário. Assim, o get é para buscar dados e o post é para enviar dados.
+	o post vai no payload da requisição -> payload parece que é um arquivo.
+	
+	Propriedades do CSS
+	a:hover -> quando se passa o mouse em cima do link
+	a:active -> se clicar, fica preto
+	input:focus -> quando está com a barrinha dentro do input
+
+SEMÂNTICA II E BOX MODEL
+	div -> para separa conteúdo em blocos
+	span -> quando se quer aplicar uma tag multifuncional -> quando se quer aplicar um css específico em um trecho.
+	pre -> já pega a formatação feita - texto pré-formatado
+	
+	Seções semânticas:
+		section -> podemos separar em seções. É a mesma coisa que uma div, mas ela é monotemática, ou seja, é específica para um cabeçalho só. Div é genérico, podendo ser usado em qualquer momento. Mas quando for desenvolver um bloco onde tem um cabeçalho e o resto de parágrafo, pode usar a section. Como uma notícia, por exemplo.
+			único cabeçalho e tals, uma coisa monotemática. - trabalha com um bloco específico da página, com um cabeçalho e o texto
+			Exemplo, no currículo, ser aplicado na seçao formação acadêmica, seção experiência profissional, etc.
+			Pode usar o p, mas pode usar o article também.
+		header - cabeçalho do conteúdo ou de um documento
+		footer -> rodapé da página - costuma-se criar em um html separado e importar nos outros htmls para reaproveitar o código sem precisar reescrever tudo de novo
+	
+	Tipos de elementos:
+		display:
+			> Inline: colocar os 3 elementos da minha lista na mesma linha. Não reconhece altura e largura. Reconhece como se fosse uma linha só. Para não ficar o espaçozinho entre eles, pode colocar um li na frente do outro. Uma outra maneira, mais recomendada, é colocar comentário (aí vai ficar como se estivesse um do lado do outro).
+			> Block: aceita altura e largura. Ele é o default. Ele considera que a li ocupa a largura total da página. Considera que o componente ocupa a largura inteira. É possível mexer o componente de um lado para o outro.
+				margin-left: auto; - não entendi muito bem, mas parece que coloca automaticamente no lado direito da página. - isso é a quantidade que quer q ele se afaste da margem esquerda.
+			> Inline-block: é uma mistura. Vai ficar um do lado do outro com altura e largura.
+
+		margin: 2 -> cima e baixo; esquerda direita
+		border: podemos ver no w3schools suas propriedades/ parâmetros que podem ser passados. -> solid 2px color; Preenche exteriormente eu acho, aumentando o tamanho total (?)
+		padding: efeito da parte de dentro -> o texto tava bem coladinho da margem. Agora, colocando o padding, tem px de distância internamente. Assim, margin é externamente e padding é internamente. Funciona do mesmo jeito do margim com aquele sentido. ÚLTIL PARA O MEU VER MAIS DAQUELE TREM LÁ
+		box-sizing: componente do css -> pode ter content-box e border-box. O content pode ter altura, largura e Pega o tamanho da tela completa. O outro considera a margem, o padding e o border tudo dentro da altura. Caiu... Pesquisar por box-sizing.
+			border-box: o componente de 300px e 10px de margem e 10px de padding, vai continuar tendo os 300px, ele não vai expandindo com margem e tals. A borda vai ser interna, o paddin também, o componente sempre vai ter 300px. Eles não vão alterar o tamanho total do objeto.
+			content-box: o componente vai crescendo conforme vai se adicionando as coisas.
+			Parece que eles falaram que a margem não entra na conta, só o padding e o border. Parece que a margem precisa somar. Pq a margem não faz parte do bloco parece.
+		Para casa - atividade 2 para fazer -> exercício semântica II utilizando os arquivos do currículo.
+
+
+(pode tipo concatenar classes: <li class="example-item example-item-fisrt"></li>) - bem interessante essa ideia
+width: 25%; parece que vai pegar 25% da largura da tela (achei legal)
+	
+	

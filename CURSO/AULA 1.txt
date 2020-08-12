@@ -1,0 +1,84 @@
+AULA 1 - HTML
+	Linguagem de marcação de hipertexto. Não de programação.
+	Composta por TAGs e Atributos que, por sua vez, formam os elementos.
+	Sintaxe de uma tag
+		tag de abertura e tag de fechamento.
+	<h1 align="center"> ... </h1>
+		align -> atributo que está centralizando todo o conteúdo que estuver no h1.
+			center como o valor do atributo.
+	Tag + atributo + valor do atributo = elemento.
+		Elemento: conjunto formado pela tag (com ou sem atributos) e o que está contido nela.
+
+	Estrutura básica de um documento HTML
+		<!DOCTYPE html> -> indicando o tipo do documento, no caso, html.
+	Criando um index.html
+	W3Schools -> boas referências de estudo para frontend - site - parece que tem várias coisas boas nele
+		Ele clicou em learn html - html básico
+		Existe um padrão que diz que só deve ter um h1 por página.
+		halguma coisa é heading parece
+h = cabeçalho
+		h1 -> só um por página, se não, perde ponto. - só uma vez por documento HTML.
+		h = cabeçalhos
+	Tag dos parágrafos: p
+		lorem -> um bocado de popagem para utilizar como um tanto de texto só para gerar conteúdo e olhar a formatação do site.
+		lorem ipsum -> lipsum.com => site para pegar lorem - você pode escolher a quantidade de parágrafos. - ele pegou 5 parágrafos
+		
+	
+		Gente, uma dica: Para formatar todo o conteúdo de uma vez é só selecionar todo o código e pressionar CTRL + K  e CTRL + F. Os dois comandos, um após o outro
+		
+		Lista - > ol e depois li - o de ordenado
+			ol - lista ordenada - já numera pra gente, começando pelo 1. Isso é o padrão, mas podemos mudar com o start, e outras coisas que não peguei muito bem
+			li - cada item da lista - são sempre os itens da lista.
+		Lista sem ser ordenada, uma lista qualquer -> ul -> monta a lista com bolinhas.
+	Comentários: <!-- -->
+		listas alinhadas
+
+CSS - Cascading Style Sheets - folhas de estilo em cascata
+	back-end - pedreiros; front-end= aqueles que deixam tudo bonito - css
+	São compostas por Regras, seletores e declarações
+	Maneira padrão de criar o CSS -> criar um arquivo separado/ desacoplado de css e depois chamá-lo/ apontamos ele no HTML.
+	TAG LINK PARA PEGAR UM ARQUIVO EXTERNO
+	tag style para pegar um arquivo interno
+	inline é para pegar dentro da tag parece
+	Mas em um prjeto profissional, sempre é externo.
+	
+	Seletor -> é como se fosse nossa tag
+		Exemplo: p é o seletor, background-color é a propriedade e o valor é a cor propriamente dita.
+		san-serif é a fonte que melhor se adapta em navegador
+		text-align: center; = alinhamento de texto
+	No site da w3schools também tem várias coisas pra aprender css e tals, com exemplos e tudo mais.
+	CSS -> tela/ prática
+	Comentário no css -> /*		
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Aqui em head, colocamos o caminho do css -->
+    <link  href="css/styles.css" rel="stylesheet">
+    <!-- o rel diz que tipo de arquivo que é. No caso, uma folha de estilo -->
+    <style>
+        body {
+        background-color: #a56134;
+        font-family: sans-serif;
+        text-align: center;
+        }
+    </style>
+    <title>Aula 1</title>
+</head>
+	Chamando internamente
+
+	Quando coloca o body do style interno, o que vai acontecer é que o que vem depois é priozidado eu acho. Tem uma ordem de precedência. O que está depois, substitui o anterior.
+	Prioridade -> tag, depois o dentro do head, e por fim o css no arquivo.
+
+
+
+
+
+
+
+
+ATIVIDADE
+	1d. Após realizar o pedido de escrever um texto, escrevendo-o apenas como um simples texto entre aspas dentro de body, fiquei surpreso ao ver que o texto apareceu.
+	4a. Sim, poderíamos utilizar o Google Fonts para importar diferentes tipos de fontes
+	4b. Esse formato de codificação cor se chama hexadecimal
+	
+		
