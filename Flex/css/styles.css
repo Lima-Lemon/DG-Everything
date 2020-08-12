@@ -1,0 +1,60 @@
+body, ul, li, p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+img {
+    max-width: 100%; /* Aumentem no máximo a 100% do tamanho do container, sendo ele, no caso
+    o div em que estão inseridas */
+    display: block; /* Não sei muito bem o porquê de ter colocado block. Poderia ser flex ou
+    tem algum motivo para ser flex?*/
+}
+
+.header {
+    background: #1d1e20;
+    display: flex; /* Itens um do lado do outro e de maneira responsiva */
+    flex-wrap: wrap; /* indicando que pode quebrar para ajustar a tela */
+    justify-content: space-between; /* espaço entre os itens do header*/
+    align-items: center; /* Alinha os itens no centro no sentido de alinhar verticalmente */
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+} 
+
+.menu li {
+    margin-left: 10px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+}
+
+/* CSS FLEXBOX */
+.flex {
+    display: flex; /* Itens um do lado do outro */
+    flex-wrap: wrap; /* Indicando que pode quebrar para ajustar na tela */
+    max-width: 800px; /* Tamanho máximo para o container */
+    margin: 0 auto;  /* Centralizando ao centro quando passa dos 800px */
+}
+
+.flex div {
+    flex: 1 1 200px; /* 1 para se expandir, 1 para ficar menor, base de 200px, tendo no mínimo ele. 
+    Se não tiver, ele vai quebrar */
+    margin: 10px; /* Adicionanado margins aos containers */
+}

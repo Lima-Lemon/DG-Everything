@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas - Eventos</title>
+    <script>
+        function changeBodyColor(){
+            document.getElementsByTagName("BODY")[0].style.backgroundColor = "green";
+        }
+
+        function myFunction() {
+                console.log("Estou clicando na imagem!");
+        }
+
+        function imagemClicada() {
+            var clicando = document.getElementById("img2");
+            clicando.addEventListener("click", myFunction);
+            console.log('x: ' + event.clientX + ', y: ' + event.clientY);
+
+        }
+
+        function mudeParaVermelho(){
+            this.addEventListener("click", mudarCor());
+        }
+
+        function mudarCor() {
+            document.getElementsByTagName("BODY")[0].style.backgroundColor = "red";
+            console.log('mudei a cor do body')
+        }
+
+        // remover a listener da página
+        function removeListener(){
+            document.getElementById('body').removeEventListener("click", mudeParaVermelho);
+            console.log('Não muda mais a cor');
+        }
+
+        function alertar(){
+            alert('Não é possível enviar')
+        }
+
+        // Cronômetro
+        function contagem_tempo(segundos){
+
+            segundos = segundos - 1;
+            
+            if(segundos == -1){
+                clearTimeout(timerId); //para a execução da função do settimeout
+                acabouOTempo();
+                return false;   
+            }
+
+            document.getElementById('tempo').innerHTML = segundos;
+            
+            if(segundos==5){
+                alert('Hora do Intervalo!');
+            }
+            timerId = setTimeout("contagem_tempo("+segundos+")", 1000);
+
+            
+        }
+
+        
+
+        function acabouOTempo() {
+            alert('Tempo esgotado!.');
+        }       
+    </script>
+</head>
+<body onclick="removeListener()" id='body'>
+
+    <div class="cronometro">
+        <h1>Segundos:<span id="tempo" style="font-size: 25px; margin-left: 20px;"></span></h1>
+        
+    </div>
+    <!--BOTÃO CUMPRIMENTAR-->
+    <button onclick="alert('Olá!')">
+        Cumprimentar
+    </button>
+    <!--BOTÃO ALTERAR FUNDO-->
+    <!--PEGUEI NO W3SCHOOLS, Não sei bem ao certo se teria um jeito melhor de ser feito-->
+    <button onclick="changeBodyColor()">
+        Alterar Fundo
+    </button>
+
+    <br><br>
+    <!--IMAGEM DE ONMOUSEOVER-->
+    <img src="images/rascunho_eu.jpg" alt="Beast digital art" onmouseover="console.log('Estou vendo a imagem!')" width="250px">
+    <!--IMAGEM DE ADDEVENTLISTENER-->
+    <br><br>
+    <img src="images/faces.jpg" alt="faces digital art" width="400px" id="img2" onmousedown="imagemClicada()">
+
+    <div class="formulário">
+        <form action="https://google.com" class="formul">
+            <label for="name">Nome</label>
+            <input type="text" name="name">
+            <label for="e-mail">E-mail</label>
+            <input type="email" name="e-mail" id="e-mail">
+            <button onclick="alertar()">Enviar</button>
+        </form>
+    </div>
+
+
+
+    <script>
+        contagem_tempo(10);
+    </script>
+</body>
+</html>

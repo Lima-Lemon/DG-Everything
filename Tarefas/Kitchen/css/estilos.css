@@ -1,0 +1,226 @@
+/* INÍCIO DAS ALTERAÇÕES DA LOGO */
+div#Logo {
+    /* background-color: darkgoldenrod; */
+    display: flex;
+    justify-content: center;
+}
+
+div#Logo img {
+    border-radius: 50%;
+    width: 20%;
+    height: 100%;
+}
+
+/* FIM DAS ALTERAÇÕES DA LOGO */
+
+/* ALTERAÇÕES DO MENU */
+div#menu {
+    justify-content: center;
+    
+}
+
+
+div#menu h3 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    align-items: center;
+    background-color: #3b3b3b;
+    width: 100%;
+    margin: 5px;
+    margin-left: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+div#menu button {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.3em;
+    align-items: center;
+    background-color: #3b3b3b;
+    width: 100%;
+    margin: 5px;
+    margin-left: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    color: #f0f0f0;
+    border: none;
+}
+
+.menu {
+    color: #f0f0f0;
+    padding: 7px;
+    
+}
+
+.menuItem1 {
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+.menuItem6 {
+    padding-right: 0px;
+}
+
+/* FIM DAS ALTERAÇÕES DO MENU */
+
+/* MEXENDO NA IMAGEM DE DESTAQUE */
+.destaque {
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+#imagemDestaque {
+    width: 100%;
+}
+
+
+/* IMAGEM DE DESTAQUE ALTERADA */
+
+/* IMAGENS AMPLIAR */
+.amplie {
+    padding: 0px;
+    padding-right: 10px;
+    /* EU QUERIA COLOCAR O MARGIN AQUI, MAS SEMPRE QUE COLOCA ELE, OS ITENS DESCONFIGURAM... */
+}
+
+.amplieFinal {
+    padding-right: 0px;
+}
+
+.imagemAmpliar {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.amplie h3 {
+    position: absolute;
+    text-align: center;
+    width: 97.3%;
+    background-color: #3b3b3ba4;
+    top: 45%;
+    color: #f0f0f0;
+}
+
+.amplie button {
+    position: absolute;
+    left: 0px;
+    border: none;
+    text-align: center;
+    width: 97.3%;
+    background-color: #3b3b3ba4;
+    top: 45%;
+    color: #f0f0f0; 
+    z-index: 2;
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
+
+.amplieFinal h3 {
+    width: 100%;
+}
+
+.amplieFinal button {
+    width: 100%;
+}
+
+.new, .sale, .free {
+    position: absolute;
+    top: 7%;
+    z-index: 1;
+    left: 78%;
+}
+
+.linha2 {
+    margin-top: 20px;
+}
+/* FIM IMAGENS AMPLIAR */
+
+/* INÍCIO TEXTO ABAIXO DA IMAGEM */
+
+.texto {
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+.texto h4 {
+    font-size: 1.4em;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-left: 0px;
+    margin-top: 15px;
+}
+
+.texto h5 {
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-left: 0px;
+    padding-left: 0px;
+    display: flex;
+    width: 100%;
+    text-align: start;
+    color: gray;
+}
+
+.texto button {
+    border: none;
+    background-color: #3b3b3b;
+    color: white;
+    font-weight: bold;
+    padding: 2px 15px;
+    margin-top: 10px;
+}
+
+/* FIM TEXTO ABAIXO DA IMAGEM */
+
+/* INÍCIO FOOTER */
+
+.footerLinha {
+    margin-top: 20px;
+    background-color: #aa1d1d;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.footerColuna {
+    display: flex;
+    justify-content: center;
+
+}
+
+.footerColuna a {
+    color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.linkComAfter::after {
+    content: "|";
+    margin-left: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.footerColuna a::before {
+    content: "";
+    margin-left: 10px;
+}
+
+
+/* EXPERIMENTANDO */
+.linhaTexto2 {
+    width: 100%;
+    margin: 0px;
+}
+
+.texto2 {
+    padding: 0px;
+}
+

@@ -1,0 +1,198 @@
+body {
+    background-image: url(../images/back.png);
+}
+
+img.Logo {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 180px;
+} 
+
+div.menu {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.menu h2 {
+    
+    background-color: #3b3b3b;
+    padding: 10px 3.5%;
+    color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+div.menu h2:hover {
+    background-color: #222222;
+}
+
+img.frango {
+    width: 80%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.products {
+    /* background-color: greenyellow; */
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.um, .dois, .três {
+    display: flex;
+    margin-top: 10px;
+}
+
+
+.um, .dois {
+    margin-right: 5px;
+}
+
+.dois, .três {
+    margin-left: 5px;
+}
+.produ {
+    /* background-color: orange; */
+    position: relative;
+}
+
+
+.milkshake, .chocolate, .restaurante {
+    width: 100%;
+    height: 300px;
+}
+
+.milkshake:hover, .chocolate:hover, .restaurante:hover {
+    border-radius: 28px;
+}
+
+.new, .free, .sale {
+    position: absolute;
+    left: 85%;
+    top: 3%;
+}
+
+h3.ampliar {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.384);
+    /* width: 100%; /* Terá 100% da largura de seu pai, no caso, o produ */
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: normal;
+    color: #cfcccc;
+    width: 100%;
+    top: 25%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+h4 {
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-top: 10px;
+    margin: 0px;
+}
+
+p {
+    margin: 0px;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-family: sans-serif;
+    color: gray;
+}
+
+h5 {
+    font-weight: bold;
+    color: #f0f0f0;
+    background-color: #3b3b3b;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 7px 10px;
+    width: 13%;
+}
+
+footer {
+    color: #f0f0f0;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: firebrick;
+    display: flex;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    width: 77%;
+    padding: 30px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* div.products {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.um, .dois, .três {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.três {
+    margin-right: 0px;
+}
+
+.produ {
+    position: relative;
+}
+
+
+
+.produ:hover {
+    opacity: 0.9;
+}
+
+
+img.new, img.free, img.sale {
+    position: absolute;
+    left: 80%;
+    top: 5%;
+    
+}
+
+h3.ampliar {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.349);
+    padding: 3px;
+    font-family: sans-serif;
+    color: #f0f0f0;
+    font-weight: normal;
+    position: absolute;
+    width: 99%;
+    top: 50%;
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+p { 
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+} */

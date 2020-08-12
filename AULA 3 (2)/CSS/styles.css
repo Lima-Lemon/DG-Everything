@@ -1,0 +1,15 @@
+body {
+    background-color: grey;
+}
+
+div,p {
+    background-color: green;
+}
+
+div.corvermelha {
+    background-color: red;
+}
+
+div > div {
+    background-color: pink;
+} 

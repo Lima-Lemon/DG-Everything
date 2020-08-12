@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FORMULÁRIO TESTE</h1>
+    <br>
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="text" id="sobrenome" placeholder="Sobreome">
+    <br><br>
+    <input type="password" id="texto1" placeholder="Senha">
+    <input type="password" id="texto2" placeholder="Confirme sua senha">
+    <br><br>
+    <button onclick="testar()">Teste</button> <!--Colocando o botão de submit não tava dando certo-->
+    <script>
+        function testar() {
+            if (document.getElementById('texto1').value != document.getElementById('texto2').value){
+                alert('As senhas estão DIFERENTES');
+            } else {
+                console.log("As senhas estão IGUAIS");
+            }
+            if (document.getElementById('texto1').value === ""){
+                alert('O campo senha é obrigatório!');
+            } else {
+                console.log(document.getElementById('texto1').value);
+            }
+            if (document.getElementById('texto2').value === ""){
+                alert('O campo de confirmação de senha é obrigatório!');
+            } else {
+                console.log(document.getElementById('texto2').value);
+            }
+            if (document.getElementById('nome').value === ""){
+                alert('O campo de nome é obrigatório!');
+            } else {
+                console.log(document.getElementById('nome').value);
+            }
+            if (document.getElementById('sobrenome').value === ""){
+                alert('O campo de sobrenome é obrigatório!');
+            } else {
+                console.log(document.getElementById('sobrenome').value);
+            }
+        }
+    </script>
+</body>
+</html>

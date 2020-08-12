@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receber nome e sobrenome de um formulário</title>
+</head>
+<body>
+    <form id="form1" onsubmit="getFormvalue()">
+        First name: <br>
+        <input type="text" id="nome" value="Neymar">
+        <br>
+        Last name: <br>
+        <input type="text" id="sobrenome" value="Jr">
+        <input type="submit" value="Submit" onclick="pegaNomeSobrenome()">
+    </form>
+
+    <script>
+        function pegaNomeSobrenome(){
+            var nome = document.getElementById('nome').value;
+            var sobrenome = document.getElementById('sobrenome').value;
+            alert(nome + sobrenome);
+        }
+    </script>
+</body>
+</html>

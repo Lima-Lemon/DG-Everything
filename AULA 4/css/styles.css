@@ -1,0 +1,53 @@
+.container {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content:flex-start;
+    border: brown solid 4px;
+}
+
+.item {
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    border: brown solid 2px;
+    
+}
+
+.item1 {
+    order: 1;
+    flex-grow: 1;
+}
+
+.item2 {
+    order: 2;
+    flex-grow: 1;
+}
+
+.item3 {
+    order: 3;
+    flex-grow: 1;
+}
+
+/*
+    flex-direction: column; /* column-reverse, row, row-reverse (row default
+    flex-wrap: wrap; /*nowrap, wrap-reverse (quebra a linha)
+    justify-content: flex-start;/*flex-end, center, space-between, space-around
+    align-items: center;/*flex-end, flex-start, stretch
+    align-content: center;/*flex-end, flex-start, stretch
+*/
+
+
+tr, td, table {
+    border: 1px solid black;
+}
+
+h1::before {
+    content: "Capítulo - ";
+}
+
+h1::after {
+    content: " de 10"
+}
